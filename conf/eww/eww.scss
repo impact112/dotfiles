@@ -6,10 +6,19 @@
   border-radius: 4px;
 }
 
-.barframe {
+.frame {
   background-color: rgba(0, 0, 0, 0.75);
   margin: 8px 8px 0 8px;
   min-height: 32px;
+}
+
+.rbox-items > * {
+  background-color: rgba(16, 16, 16, 0.75);
+  margin: 4px;
+}
+
+.rbox-items > * > label {
+  padding-left: 8px;
 }
 
 .workspaces {
@@ -22,14 +31,46 @@
   min-width: 24px;
 }
 
+.workspaces > button > label {
+  color: #c0c0c0;
+}
+
+.current {
+  background-color: rgba(8, 8, 8, 0.75);
+}
+
 .occupied {
   background-color: rgba(16, 16, 16, 0.75);
 }
 
-.workspaces > button:hover {
+.workspaces > button:hover:not(.current){
   background-color: rgba(64, 64, 64, 0.75);
 }
 
 .currentwindowname {
   padding-left: 0.5rem;
 }
+
+.actionmenutoggle {
+  background-color: rgba(48, 48, 48, 0.75);
+}
+
+.actionmenuframe{
+  background-color: rgba(0, 0, 0, 0.75);
+  margin: 8px 8px 0 8px;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.qstileframe{
+  padding: 8px 8px 8px 0;
+  background-color: rgba(64, 64, 64, 0.75);
+}
+
+.qstile {
+  background-color: rgba(16, 16, 16, 0.75);
+  padding: 4px;
+  margin-left: 8px;
+}
+
+

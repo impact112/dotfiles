@@ -1,0 +1,24 @@
+(defwidget datetime []
+  DATETIME)
+
+(defpoll DATETIME :interval "10s"
+  "date '+%b %d %H:%M'")
+
+(defpoll BATTERY :interval "30s"
+  "scripts/battery")
+
+(defpoll BATTERY_ICON :interval "2s"
+  "scripts/battery --icon")
+
+(defpoll NETWORK_NAME :interval "30s"
+  "scripts/network")
+
+(defpoll NETWORK_ICON :interval "2s"
+  "scripts/network --icon")
+
+(deflisten CURRENT_WINDOW :initial " "
+  "sh ~/.config/eww/scripts/currentwindow")
+
+(deflisten CURRENT_WORKSPACE :initial "1" "bash ~/.config/eww/scripts/currentworkspace")
+
+(deflisten WORKSPACES :initial "[]" "bash ~/.config/eww/scripts/get-workspaces")

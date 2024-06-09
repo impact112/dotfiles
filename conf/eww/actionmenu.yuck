@@ -1,0 +1,31 @@
+(defwidget actionmenu []
+  (box :orientation "v"
+       :class "actionmenuframe"
+    (qstiles)))
+
+(defwidget qstiles []
+  (box :class "qstileframe"
+       :orientation "v"
+    (box :class "qstilerow"
+         :orientation "h"
+         :halign "center"
+         :space-evenly false
+      (batterytile)
+      (networktile)))
+)
+
+(defwidget batterytile []
+  (box :class "qstile"
+       :orientation "h"
+       :width 150
+       :space-evenly false
+    (label :hexpand true :text "${BATTERY}")
+    (image :path "${BATTERY_ICON}")))
+
+(defwidget networktile []
+  (box :orientation "h"
+       :class "qstile"
+       :width 150
+       :space-evenly false
+    (label :hexpand true :text "${NETWORK_NAME}")
+    (image :path "${NETWORK_ICON}")))

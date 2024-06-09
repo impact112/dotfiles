@@ -1,0 +1,67 @@
+(include "common.yuck")
+
+(defwidget topbar []
+  (box :class "frame"
+    (centerbox :orientation "h"
+      (lbox)
+      (mbox)
+      (rbox)
+    )))
+
+(defwidget lbox []
+  (box :class "lbox"
+       :space-evenly false
+    (workspaces)
+    (currentwindow)))
+
+(defwidget workspaces []
+  (box :class "workspaces"
+       :space-evenly false
+       (label :text "${WORKSPACES}${CURRENT_WORKSPACE}" :visible false)
+       (for workspace in WORKSPACES
+         (button :class "${workspace.id == CURRENT_WORKSPACE ? "current" : "${workspace.windows > 0 ? "occupied" : "" }"}"
+                 :onclick "hyprctl dispatch workspace ${workspace.id}"
+                 "${workspace.id}"))))
+
+(defwidget currentwindow []
+  (label :class "currentwindowname"
+         :halign "left"
+         :text "${CURRENT_WINDOW}"))
+
+(defwidget mbox []
+  (box (datetime)))
+
+(defwidget rbox []
+  (box :class "rbox"
+       :orientation "h"
+       :halign "end"
+       :space-evenly false
+    (systray :icon-size 16
+             :space-evenly false
+             :spacing 0)
+    (box :class "rbox-items"
+      (network)
+      (battery))
+    (actionmenutoggle)))
+
+(defwidget battery []
+  (box :class "battery"
+       :orientation "h"
+       :halign "end"
+       :space-evenly false
+    (label :text "${BATTERY}")
+    (image :path "${BATTERY_ICON}")))
+
+
+(defwidget network []
+  (box :class "network"
+       :orientation "h"
+       :halign "end"
+    (image :path "${NETWORK_ICON}")))
+
+
+(defwidget actionmenutoggle []
+  (eventbox :space-evenly false
+            :class "actionmenutoggle"
+            :onclick "~/.config/eww/scripts/togglewindow actionmenu"
+    (image :path "/usr/share/icons/Papirus-Dark/24x24@2x/actions/application-menu.svg")))
