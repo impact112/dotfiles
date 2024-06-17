@@ -1,16 +1,13 @@
 # SolidConf
 
-My personal configuration for a complete tiled desktop experience.
+My personal configuration for a complete tiled desktop experience heavily inspired by gnome.
 
 Configurations are included for the following programs:
 - hyprland
 - hypridle
 - hyprlock
 - hyprwinwrap
-- eww
+- ags
 - foot
-
-Deprecated configs:
-- waybar
 
 These configs are not to be considered stable and will change sporadicaly.

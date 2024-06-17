@@ -1,0 +1,54 @@
+* {
+  all: unset;
+  color: #d0d0d0;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.frame {
+  background-color: rgba(0, 0, 0, 0.75);
+  min-height: 32px;
+}
+
+.lbox > label {
+  padding-left: 8px;
+}
+
+stack {
+  background-color: red;
+}
+
+.rbox > * {
+  background-color: rgba(16, 16, 16, 0.75);
+  padding-left: 8px;
+  padding-right: 8px;
+  margin: 4px 4px 4px 0;
+}
+
+.workspaces {
+  padding-left: 4px;
+  background-color: rgba(48, 48, 48, 0.75);
+}
+
+.workspaces > button {
+  margin: 4px 4px 4px 0;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.workspaces > button > label {
+  color: #c0c0c0;
+}
+
+.current {
+  background-color: rgba(8, 8, 8, 0.75);
+}
+
+.occupied {
+  background-color: rgba(16, 16, 16, 0.75);
+}
+
+.workspaces > button:hover:not(.current) {
+  background-color: rgba(64, 64, 64, 0.75);
+}

@@ -4,7 +4,7 @@
 
 mkdir -p conf
 
-echo "Retrieving existing configuration files"
+echo "Retrieving configuration files"
 cp -r "$HYPR_CONF_PATH" conf/
 cp -r "$FOOT_CONF_PATH" conf/
-cp -r "$EWW_CONF_PATH" conf/
+cp -r "$AGS_CONF_PATH" conf/
