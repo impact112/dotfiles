@@ -1,3 +1,5 @@
 #!/bin/sh
 
-# Format configs here
+. ./config.sh
+
+prettier -w $AGS_CONF_PATH

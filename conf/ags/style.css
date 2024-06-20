@@ -15,15 +15,20 @@
   padding-left: 8px;
 }
 
-stack {
-  background-color: red;
-}
-
 .rbox > * {
   background-color: rgba(16, 16, 16, 0.75);
   padding-left: 8px;
   padding-right: 8px;
   margin: 4px 4px 4px 0;
+}
+
+.rbox > box > *:not(stack):not(:last-child),
+.rbox > box > stack > box > *:not(:last-child) {
+  margin-right: 8px;
+}
+
+tooltip {
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .workspaces {
