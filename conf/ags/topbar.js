@@ -124,7 +124,7 @@ export const TopBar = (monitor) => {
     monitor: monitor,
     anchor: ["top", "left", "right"],
     exclusivity: "exclusive",
-    layer: "overlay",
+    layer: "fg",
     class_name: "frame",
     margins: [8, 8, 0, 8],
     child: topbar,

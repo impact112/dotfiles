@@ -4,6 +4,7 @@
 
 mkdir -p conf
 
+echo "Formatting configuration files"
 ./format.sh > /dev/null
 
 echo "Retrieving configuration files"
